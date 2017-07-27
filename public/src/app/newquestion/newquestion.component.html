@@ -1,0 +1,33 @@
+
+<ul>
+  <li class = "inline">
+    <a href (click)="logout()"> Logout</a>
+  </li>
+  <li class = "inline">
+    <a href [routerLink]="['/dashboard']">Home Again</a>
+  </li>
+</ul>
+
+<div class="row">
+  <div class="col">
+  <form (submit)="createQuestion()" #questionForm="ngForm" >
+      <div class="form-group">
+        <label>Create A Poll</label>
+        <input type="text" class="form-control" name="question" [(ngModel)]="newQuestion.question">
+        <label> Option1 </label>
+        <input type = "text" class = "form-control" name = "option1" [(ngModel)]="newQuestion.option1" />
+        <label> Option2 </label>
+        <input type = "text" class = "form-control" name = "option2" [(ngModel)]="newQuestion.option2" />
+        <label> Option3 </label>
+        <input type = "text" class = "form-control" name = "option3" [(ngModel)]="newQuestion.option3" />
+        <label> Option4 </label>
+        <input type = "text" class = "form-control" name = "option4" [(ngModel)]="newQuestion.option4" />
+      </div>
+      <button type="submit" class="btn btn-default">Post Question</button>
+    </form>
+  </div>
+</div>
+<p *ngFor="let error of errors">
+  {{error}}
+</p>
+<router-outlet></router-outlet>

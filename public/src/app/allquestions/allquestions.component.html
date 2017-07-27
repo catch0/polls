@@ -1,0 +1,32 @@
+<h2>Whats Up {{currentUser.name}}</h2>
+<ul>
+  <li class = "inline">
+    <a href (click)="logout()"> Logout</a>
+  </li>
+  <li>
+    <a href [routerLink]="['/newquestion']">Create A New Poll</a>
+  </li>
+</ul>
+<table>
+  <th>
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        Survey Question
+      </td>
+      <td>
+        Action
+      </td>
+    </tr>
+    </th>
+    <tr *ngFor="let question of questions">
+      <td>
+        <!-- {{question.user.name}} -->
+      </td>
+      <td>
+        <a href [routerLink]="['/question', question._id]"> {{question.question}}</a>
+      </td>
+    </tr>
+</table>

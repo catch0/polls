@@ -1,0 +1,70 @@
+<ul>
+  <li class = "inline">
+    <a href (click)="logout()"> Logout</a>
+  </li>
+  <li>
+    <a href [routerLink]="['/newquestion']">Create A New Poll</a>
+  </li>
+</ul>
+
+
+
+
+<h1> {{question.question}}</h1>
+<table>
+  <tr>
+    <td>
+      Option
+    </td>
+    <td>
+      Current Count Votes
+    </td>
+    <td>
+      Action
+    </td>
+  </tr>
+  <tr>
+  <td>
+    {{question.option1.type}}
+  </td>
+  <td>
+    {{question.option1.votes.length}}
+  </td>
+  <td>
+    <button>Vote</button>
+  </td>
+</tr>
+<tr>
+<td>
+  {{option2.type}}
+</td>
+<td>
+  {{option2.votes.length}}
+</td>
+<td>
+  <button>Vote</button>
+</td>
+</tr>
+<tr>
+<td>
+  {{option3.type}}
+</td>
+<td>
+  {{option3.votes.length}}
+</td>
+<td>
+  <button>Vote</button>
+</td>
+</tr>
+<tr>
+<td>
+  {{option4.type}}
+</td>
+<td>
+  {{option4.votes.length}}
+</td>
+<td>
+  <button>Vote</button>
+</td>
+</tr>
+</table>
